@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://csejop8vupha4"]
+
+[ext_resource type="Texture2D" uid="uid://di3bx5qx3lag3" path="res://blue background.png" id="1_m7s7f"]
+[ext_resource type="PackedScene" uid="uid://c6mg8208jmrca" path="res://character_body_2d.tscn" id="2_5xxck"]
+[ext_resource type="PackedScene" uid="uid://bgv8ykrrxkkqh" path="res://Scenes/slash.tscn" id="3_e4pdu"]
+[ext_resource type="PackedScene" uid="uid://dd2q387ygwncd" path="res://enemy.tscn" id="4_qnuam"]
+[ext_resource type="Script" path="res://enemy.gd" id="5_0chrj"]
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 2000.0
+offset_bottom = 1526.0
+scale = Vector2(0.578868, 0.428974)
+size_flags_horizontal = 0
+texture = ExtResource("1_m7s7f")
+stretch_mode = 3
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="mc" parent="." instance=ExtResource("2_5xxck")]
+position = Vector2(538, 321)
+
+[node name="slash" parent="." instance=ExtResource("3_e4pdu")]
+position = Vector2(612, 324)
+
+[node name="Enemy" parent="." instance=ExtResource("4_qnuam")]
+script = ExtResource("5_0chrj")

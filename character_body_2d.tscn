@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6mg8208jmrca"]
+
+[ext_resource type="Script" path="res://Scenes/MC.gd" id="1_kjbjs"]
+[ext_resource type="Texture2D" uid="uid://pnsgw7cnwjo7" path="res://sword.png" id="2_50gon"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_kjbjs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_50gon")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(60, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, -20, -12, -16, -7, -16, -7, -8, 52, -8, 52, -4, 56, -4, 56, 0, 60, 0, 60, 4, 56, 4, 56, 8, 52, 8, 52, 12, -8, 12, -8, 20, -12, 20, -12, 24, -20, 24, -20, 20, -24, 20, -24, 8, -40, 8, -40, 12, -48, 12, -48, 8, -52, 8, -52, -4, -48, -4, -48, -8, -40, -8, -40, -4, -24, -4, -24, -16, -20, -16, -20, -20)

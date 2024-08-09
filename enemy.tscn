@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd2q387ygwncd"]
+
+[ext_resource type="Texture2D" uid="uid://dey5vhvthjssu" path="res://Lil-Slime.png" id="1_xwsk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryc0t"]
+size = Vector2(17.3096, 16.3342)
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.995689, 0.919905)
+texture = ExtResource("1_xwsk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.92667, -6.5)
+rotation = -3.14159
+scale = Vector2(8.31059, -5.44868)
+shape = SubResource("RectangleShape2D_ryc0t")
