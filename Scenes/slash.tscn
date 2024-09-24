@@ -1,25 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgv8ykrrxkkqh"]
+[gd_scene load_steps=3 format=3 uid="uid://bgv8ykrrxkkqh"]
 
 [ext_resource type="Script" path="res://Scenes/slash.gd" id="1_qpqa0"]
 [ext_resource type="Texture2D" uid="uid://dybih0lde8dja" path="res://slash.png" id="2_ahxpp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktgu6"]
-size = Vector2(14, 7)
-
-[node name="slash" type="Area2D"]
-rotation = 1.5708
-scale = Vector2(1.5, 1.5)
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_qpqa0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ktgu6")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ahxpp")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-1.42109e-14, -1.86265e-09)
-scale = Vector2(0.709877, 0.379019)
+position = Vector2(-2.38419e-07, -6.375)
+scale = Vector2(1.1, 0.4375)
 
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = -3.14159
+polygon = PackedVector2Array(-20, 8, -12, 8, -12, 12, -4, 12, -4, 16, 4, 16, 4, 12, 12, 12, 12, 8, 20, 8, 20, 4, 24, 4, 24, 0, 28, 0, 28, -4, 32, -4, 32, -12, 28, -12, 28, -16, 20, -16, 20, -12, 16, -12, 16, -8, 8, -8, 8, -4, 4, -4, 4, 0, -4, 0, -4, -4, -8, -4, -8, -8, -16, -8, -16, -12, -20, -12, -20, -16, -28, -16, -28, -12, -32, -12, -32, -4, -28, -4, -28, 0, -24, 0, -24, 4, -20, 4)
